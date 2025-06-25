@@ -8,6 +8,16 @@ static _EXTERNAL_ASSET: Asset = asset!(
         .with_hash_suffix(false)
 );
 
+// Alternatively external_asset applies the `#[used]` attribute inside the macro with works with constants
+// const _: () = {
+//     external_asset!(
+//         "/66571940.jpeg",
+//         ImageAssetOptions::new()
+//             .into_asset_options()
+//             .with_hash_suffix(false)
+//     );
+// };
+
 pub fn please_build_me() {
     println!("Please build me!");
 }
